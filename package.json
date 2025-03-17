@@ -1,0 +1,25 @@
+{
+  "name": "sdi29_knex_workshop",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Tollhouse/SDI29_Knex_Workshop#readme",
+  "bugs": {
+    "url": "https://github.com/Tollhouse/SDI29_Knex_Workshop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tollhouse/SDI29_Knex_Workshop.git"
+  },
+  "license": "ISC",
+  "author": "'",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start" : "node ./src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "knex": "^3.1.0",
+    "pg": "^8.14.1"
+  }
+}
