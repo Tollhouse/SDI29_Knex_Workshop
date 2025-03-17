@@ -26,6 +26,32 @@ app.get('/', function (req, res) {
       });
   });
   
+  app.get('/different', function (req, res) {
+    knex('name_table')
+      .select(
+        "*"
+      )
+      .then(data => {
+        res.status(200).json(data);
+      })
+      .catch(err => {
+        res.status(500).json({
+          message: 'There was an error fetching the data. Please try again later.'
+        });
+      });
+  });
 
+  app.post('/add', function (req, res){
+    const data = JSON.stringify(req.body)
+    knex('name_table')
+    .insert(
+        req.body
+    )
+    .then(() =>{
+        console.log(data)
+        res.status(200).send(`Working`);
+    })
+
+  });
 
 console.log()
